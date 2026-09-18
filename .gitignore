@@ -1,0 +1,177 @@
+# ==========================================
+# SKILLSWAP - GLOBAL GITIGNORE
+# ==========================================
+
+
+# ==========================================
+# ENVIRONMENT VARIABLES / SECRETS
+# ==========================================
+
+.env
+.env.*
+!.env.example
+
+
+# ==========================================
+# GOOGLE CREDENTIALS & TOKENS
+# ==========================================
+
+# Backend Google credentials
+skillbackend/credentials/
+skillbackend/**/credentials.json
+skillbackend/**/token.json
+
+# Any Google credential files
+**/google-service-account.json
+**/google-oauth-client.json
+**/credentials.json
+**/token.json
+
+# Private keys
+*.pem
+*.key
+*.crt
+
+
+# ==========================================
+# BACKEND - NODE.JS
+# ==========================================
+
+skillbackend/node_modules/
+
+skillbackend/npm-debug.log*
+skillbackend/yarn-debug.log*
+skillbackend/yarn-error.log*
+skillbackend/pnpm-debug.log*
+
+skillbackend/.npm/
+skillbackend/.cache/
+
+
+# ==========================================
+# FRONTEND - REACT / VITE
+# ==========================================
+
+skillfrontend/node_modules/
+
+skillfrontend/dist/
+skillfrontend/build/
+
+skillfrontend/.vite/
+skillfrontend/.cache/
+
+skillfrontend/npm-debug.log*
+skillfrontend/yarn-debug.log*
+skillfrontend/yarn-error.log*
+skillfrontend/pnpm-debug.log*
+
+
+# ==========================================
+# GENERAL NODE.JS
+# ==========================================
+
+node_modules/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.npm/
+.yarn/
+.pnpm-store/
+
+
+# ==========================================
+# VITE LOCAL ENVIRONMENT FILES
+# ==========================================
+
+*.local
+
+
+# ==========================================
+# IDE / EDITORS
+# ==========================================
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+.idea/
+*.iml
+
+*.swp
+*.swo
+*~
+
+
+# ==========================================
+# OPERATING SYSTEM
+# ==========================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+.directory
+
+
+# ==========================================
+# LOGS
+# ==========================================
+
+*.log
+logs/
+
+
+# ==========================================
+# TEST / COVERAGE
+# ==========================================
+
+coverage/
+.nyc_output/
+
+
+# ==========================================
+# TEMPORARY FILES
+# ==========================================
+
+tmp/
+temp/
+*.tmp
+*.temp
+
+
+# ==========================================
+# UPLOADS / GENERATED FILES
+# ==========================================
+
+uploads/
+output/
+generated/
+
+
+# ==========================================
+# BACKUPS
+# ==========================================
+
+*.bak
+*.backup
+*.old
+
+
+# ==========================================
+# LOCAL DATABASE FILES
+# ==========================================
+
+*.sqlite
+*.sqlite3
+*.db
