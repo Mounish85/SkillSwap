@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-white min-h-screen antialiased selection:bg-fuchsia-500 selection:text-white font-sans;
+    background-color: #020617;
+    overflow-x: hidden;
+  }
+}
+
+/* Glassmorphism primitives */
+.glass-panel {
+  @apply backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl;
+}
+
+.glass-panel-subtle {
+  @apply backdrop-blur-lg bg-white/5 border border-white/10 rounded-2xl;
+}
+
+.glass-input {
+  @apply px-5 py-3.5 backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl text-white placeholder:text-white/40 focus:border-violet-500/50 focus:ring-2 focus:ring-violet-500/20 outline-none transition-all duration-300;
+}
+
+.btn-primary {
+  @apply px-6 py-3 rounded-2xl font-medium transition-all duration-300 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white hover:scale-[1.02] active:scale-95 shadow-lg shadow-violet-500/25 hover:shadow-fuchsia-500/35;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 rounded-2xl font-medium transition-all duration-300 backdrop-blur-xl bg-white/10 border border-white/20 text-white hover:bg-white/15 hover:scale-[1.02] active:scale-95;
+}
+
+.btn-danger {
+  @apply px-6 py-3 rounded-2xl font-medium transition-all duration-300 bg-gradient-to-r from-red-600 to-rose-600 text-white hover:scale-[1.02] active:scale-95 shadow-lg shadow-red-500/25;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.32);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
